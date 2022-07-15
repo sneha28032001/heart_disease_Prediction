@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <style type="text/css">
+  body {
+    color: purple;
+    background-color: #d8da3d }
+  </style>
+</head>
+<body>
+
+		<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>HEART DISEASE PREDICTION APP</h2>
+		
+	</div>
+	</header>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form action="\predict" method="post">
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Age</h5>
+                            <!-- Departure -->
+                            <input type="int" name="age" id="age" required="required">
+                        </div>
+                    </div>
+                </div>
+  <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Gender</h5>
+                            <select name="sex" id="sex" required="required">
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+ <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Chest Pain Type</h5>
+                            <select name="cp" id="cp" required="required">
+                                <option value="0">No Pain</option>
+                                <option value="1">Mild Pain</option>
+                                <option value="2">Moderate Pain</option>
+                                <option value="3">Extreme Pain</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+          <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Resting blood pressure (in mm Hg)</h5>
+                            <!-- Departure -->
+                            <input type="int" name="trestbps" id="trestbps" required="required">
+                        </div>
+                    </div>
+                </div>
+       <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Serum cholestoral in mg/dl</h5>
+                            <!-- Departure -->
+                            <input type="int" name="chol" id="chol" required="required">
+                        </div>
+                    </div>
+                </div>
+     <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Is fasting blood sugar greater than 120 mg/dl</h5>
+                            <select name="fbs" id="fbs" required="required">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+   <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Resting electrocardiographic results</h5>
+                            <select name="restecg" id="restecg" required="required">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+         <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Maximum heart rate achieved</h5>
+                            <!-- Departure -->
+                            <input type="int" name="thalach" id="thalach" required="required">
+                        </div>
+                    </div>
+                </div>
+   <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Exercise induced angina</h5>
+                            <select name="exang" id="exang" required="required">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+   <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Oldpeak = ST depression induced by exercise relative to rest(0.0 to 6.2)</h5>
+                            <!-- Departure -->
+                            <input type="int" name="oldpeak" id="oldpeak" required="required">
+                        </div>
+                    </div>
+                </div>
+ <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">The slope of the peak exercise ST segment</h5>
+                            <select name="slope" id="slope" required="required">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+                    </div>
+ <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Number of major vessels colored by flourosopy</h5>
+                            <select name="ca" id="ca" required="required">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+ <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Source -->
+                            <h5 class="card-title">Thal: 3=normal; 6 = fixed defect; 7 = reversable defect</h5>
+                            <select name="thal" id="thal" required="required">
+                                <option value="0">Normal</option>
+                                <option value="1">fixed defect</option>
+                                <option value="2">reversable defect</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Predict Chances of Heart disease" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+</br>
+		</br>
+	
+	 <div class='footer'>
+           <div class="contact">
+	       
+               <a target="_blank" href="https://github.com/sneha28032001"><i class="fa fa-github-square" style="font-size:36px"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/sneha-agarwal-977b02203/"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+           </div>
+		</br>
+		</br>
+           <p class='footer-description'>Made by Sneha Agarwal</p>
+       </div>
+
+</body>
+</html>
