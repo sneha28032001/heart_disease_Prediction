@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+  <style type="text/css">
+  body {
+    color: purple;
+    background-color: #d8da3d }
+  </style>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>HEART DISEASE PREDICTION APP</h2>
+		
+	</div>
+	</header>
+	<p style="color:black;font-size:20;text-align: center;"><b>Results for Heart Rate Prediction</b></p>
+	<div class="results">
+
+	<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Oops! You have HEART DISEASE.</span></h1>
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Great! You DON'T have HEART DISEASE.</span></h1>
+			{% endif %}
+		</div>
+
+
+	 <div class='footer'>
+           <div class="contact">
+	       
+               <a target="_blank" href="https://github.com/sneha28032001"><i class="fa fa-github-square" style="font-size:36px"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/sneha-agarwal-977b02203/"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+           </div>
+		</br>
+		</br>
+           <p class='footer-description'>Made by Sneha Agarwal</p>
+       </div>
+
+</body>
+</html>
